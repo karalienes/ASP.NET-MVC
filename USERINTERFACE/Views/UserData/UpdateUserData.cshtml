@@ -1,0 +1,91 @@
+﻿@model EntityLayer.Concrete.Traningİnfo
+@{
+    ViewBag.Title = "UpdateUserData PAGE";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <style>
+        body {
+            background-color: #ccc;
+            background-image: url(../../src/logo.jpg);
+            background-size: 400px 00px;
+            height: auto;
+            width: auto;
+        }
+
+
+
+        div::after {
+            content: "";
+            background: url(../../src/logo.jpg);
+            opacity: 0.05;
+            height: auto;
+            width: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+        </div>
+
+    </form>
+</body>
+</html>
+
+<h2>UpdateUserData PAGE</h2>
+
+@using (Html.BeginForm("UpdateUserData", "UserData", FormMethod.Post))
+{
+   
+<div class="form-group">
+    @Html.HiddenFor(x => x.UserID, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Enter Name-Surname:  ")
+    @Html.HiddenFor(x => x.UserData.UserID, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.UserData.AdSoyad, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.UserData.Şifre, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.UserData.Mail, new { @class = "form-control" })
+
+    @Html.HiddenFor(x => x.UserID, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.TraningId, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.PeriyodId, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.TraningİnfoId, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.CreateTime, new { @class = "form-control" })
+
+    @Html.HiddenFor(x => x.Periyod.PeriyodId, new { @class = "form-control" })
+    <br />
+    @Html.Label("Enter the Year:  ")
+    @Html.TextBoxFor(x => x.Periyod.Yıl, new { @class = "form-control" })
+    <br />
+    @Html.Label("Enter the Mounth: ")
+    @Html.TextBoxFor(x => x.Periyod.Ay, new { @class = "form-control" })
+    <br />
+    @Html.Label("Enter the Week:  ")
+    @Html.TextBoxFor(x => x.Periyod.Hafta, new { @class = "form-control" })
+    <br />
+    @Html.Label("Enter the job: ")
+    @Html.TextBoxFor(x => x.Traning.TraningName, new { @class = "form-control" })
+    <br />
+    @Html.HiddenFor(x => x.Traning.TraningId, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.Traning.TraningTypeId, new { @class = "form-control" })
+    @Html.Label("Enter the type of job:  ")
+    @Html.TextBoxFor(x => x.Traning.TraningTypes.TraningTypee, new { @class = "form-control" })
+    <br />
+    @Html.HiddenFor(x => x.Traning.TraningTypes.TraningTypeId, new { @class = "form-control" })
+    <br />
+    
+    <button class="btn btn-success">Update</button>
+
+</div>
+}

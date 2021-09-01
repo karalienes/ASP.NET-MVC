@@ -1,0 +1,77 @@
+﻿@model EntityLayer.Concrete.UserData
+
+@{
+    ViewBag.Title = "Add User PAGE";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <style>
+        body {
+            background-color: #ccc;
+            background-image: url(../../src/logo.jpg);
+            background-size: 400px 00px;
+            height: auto;
+            width: auto;
+        }
+
+
+
+        div::after {
+            content: "";
+            background: url(../../src/logo.jpg);
+            opacity: 0.05;
+            height: auto;
+            width: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+        </div>
+
+    </form>
+</body>
+</html>
+
+
+
+<h2>Add User PAGE</h2>
+<br />
+
+@using (Html.BeginForm("AddUser", "User", FormMethod.Post))
+
+{
+    <div class="form-group">
+        @Html.Label("Enter Name-Surname: ")
+        @Html.TextBoxFor(model => model.AdSoyad, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.AdSoyad)
+      
+        <br />
+        @Html.Label("Enter E-mail: ")
+        @Html.TextBoxFor(model => model.Mail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Mail)
+        
+        <br />
+        @Html.Label("Enter password: ")
+        <div >
+              @Html.TextBoxFor(Model => Model.Şifre, new { @class = "form-control" })
+        </div>
+      
+        @Html.ValidationMessageFor(x => x.Şifre)
+        
+        <br />
+        <button class="alert-danger" style="width:100px;height:30px">Save</button>
+
+    </div>
+}

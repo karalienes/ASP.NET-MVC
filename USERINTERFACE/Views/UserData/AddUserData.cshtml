@@ -1,0 +1,118 @@
+﻿@model EntityLayer.Concrete.Traningİnfo
+
+@{
+    ViewBag.Title = "Add UserData PAGE";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <style>
+        body {
+            background-color: #ccc;
+            background-image: url(../../src/logo.jpg);
+            background-size: 400px 00px;
+            height: auto;
+            width: auto;
+        }
+
+
+
+        div::after {
+            content: "";
+            background: url(../../src/logo.jpg);
+            opacity: 0.05;
+            height: auto;
+            width: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+        </div>
+
+    </form>
+</body>
+</html>
+
+
+
+<h2>Add UserData PAGE</h2>
+<br />
+
+@using (Html.BeginForm("AddUserData", "UserData", FormMethod.Post))
+
+{
+<div class="form-group">
+
+    @Html.Label("Enter Name-Surname: ")
+    <br />
+    <div style="width:22%;float:left">
+        @Html.DropDownListFor(model => model.UserData.AdSoyad, (List<SelectListItem>)ViewBag.Items, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.UserData.AdSoyad)
+        @Html.HiddenFor(model => model.UserData.Mail)
+        @Html.HiddenFor(model => model.UserData.Şifre)
+    </div>
+    <div style="float:left">
+        <a href="/User/AddUser" class="btn btn-danger" style="width:150px;height:30px">Add User</a>
+    </div>
+
+    <br />
+    <br />
+
+    @Html.Label("Enter the Period: ")
+    <br />
+    <div style="width:22%;float:left">
+        @Html.DropDownListFor(Model => Model.PeriyodId, (List<SelectListItem>)ViewBag.Items4, new { @class = "form-control" })
+    </div>
+    <div style="float:left">
+        <a href="/Periyod/AddPeriyod" class="btn btn-danger" style="width:150px;height:30px">Add Periyod</a>
+    </div>
+
+    <br />
+    <br />
+
+    @Html.Label("Enter the job: ")
+    <br />
+    <div style="width:22%;float:left">
+        @Html.DropDownListFor(Model => Model.Traning.TraningName, (List<SelectListItem>)ViewBag.Items5, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Traning.TraningName)
+    </div>
+    <div style="float:left">
+        <a href="/Traning/AddTraning" class="btn btn-danger" style="width:150px;height:30px">Add Traning</a>
+    </div>
+
+    <br />
+    <br />
+    @Html.Label("Enter the type of job: ")
+    <br />
+    <div style="width:22%;float:left;height:fit-content">
+        @Html.DropDownListFor(Model => Model.Traning.TraningTypes.TraningTypee, (List<SelectListItem>)ViewBag.Items6, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Traning.TraningTypes.TraningTypee)
+    </div>
+    <div style="float:left">
+        <a href="/TraningType/AddTraningType" class="btn btn-danger" style="width:150px;height:30px">Add TraningType</a>
+    </div>
+
+
+    <br />
+    <br />
+    <br />
+    
+        <button class="alert-danger" style="width:100px;height:30px">Save</button>
+    
+   
+
+
+</div>
+}
+

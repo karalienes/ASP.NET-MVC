@@ -1,0 +1,15 @@
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\bin\Debug\EntityLayer.dll
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\bin\Debug\EntityLayer.pdb
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\black\Desktop\ELDOR\ELDORPROJE\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

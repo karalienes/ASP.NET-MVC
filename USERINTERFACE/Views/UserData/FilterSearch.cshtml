@@ -1,0 +1,125 @@
+﻿@model USERINTERFACE.Models.Birleştirici
+@{
+    ViewBag.Title = "FilterSearch PAGE";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <style>
+        body {
+            background-color: #ccc;
+            background-image: url(../../src/logo.jpg);
+            background-size: 400px 00px;
+            height: auto;
+            width: auto;
+        }
+
+
+
+        div::after {
+            content: "";
+            background: url(../../src/logo.jpg);
+            opacity: 0.05;
+            height: auto;
+            width: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+        </div>
+
+    </form>
+</body>
+</html>
+
+<h2>FilterSearch PAGE</h2>
+
+@{
+    bool TraningTypeControl = true;
+}
+<table class="table table-hover">
+
+    <tr>
+
+        <th>Name-Surname</th>
+        <th>Year</th>
+        <th>Mounth</th>
+        <th>Week</th>
+        <th>Job</th>
+        <th>Type Job</th>
+        
+
+    </tr>
+
+    @foreach (var item in Model.Traningİnfos)
+    {
+        <tr>
+        </tr>
+        TraningTypeControl = true;
+        foreach (var item1 in Model.UserDatas)
+        {
+            if (item.UserID == item1.UserID)
+            {
+                <td>@item1.AdSoyad</td>
+
+                foreach (var item2 in Model.Periyods)
+                {
+                    if (item.PeriyodId == item2.PeriyodId)
+                    {
+                        <td>@item2.Yıl</td>
+                        <td>@item2.Ay</td>
+                        <td>@item2.Hafta</td>
+
+                        foreach (var item3 in Model.Tranings)
+                        {
+                            if (item.TraningId == item3.TraningId)
+                            {
+                                <td>@item3.TraningName</td>
+
+                                foreach (var item4 in Model.TraningTypes)
+                                {
+                                    TraningTypeControl = true;
+
+                                    if (item3.TraningTypeId == item4.TraningTypeId && TraningTypeControl == true)
+                                    {
+                                        <td>@item4.TraningTypee</td>
+                                        TraningTypeControl = false;
+
+                                    }
+
+
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+
+
+
+        <br />
+    }
+    
+
+</table>
+
+<a href="/UserData/Back" class="btn btn-danger">Back</a>

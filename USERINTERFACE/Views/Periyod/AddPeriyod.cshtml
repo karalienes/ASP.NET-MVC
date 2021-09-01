@@ -1,0 +1,78 @@
+﻿@model EntityLayer.Concrete.Periyod
+
+@{
+    ViewBag.Title = "Add Period PAGE";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <style>
+        body {
+            background-color: #ccc;
+            background-image: url(../../src/logo.jpg);
+            background-size: 400px 00px;
+            height: auto;
+            width: auto;
+        }
+
+
+
+        div::after {
+            content: "";
+            background: url(../../src/logo.jpg);
+            opacity: 0.05;
+            height: auto;
+            width: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+        </div>
+
+    </form>
+</body>
+</html>
+
+
+
+<h2>Add Period PAGE</h2>
+<br />
+
+@using (Html.BeginForm("AddPeriyod", "Periyod", FormMethod.Post))
+
+{
+<div class="form-group">
+
+   
+    
+    @Html.Label("Enter the Year: ")
+    @Html.TextBoxFor(model => model.Yıl, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Yıl)
+    
+    <br />
+    @Html.Label("Enter the Mounth: ")
+    @Html.TextBoxFor(Model => Model.Ay, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Ay)
+    
+    <br />
+    @Html.Label("Enter the Week: ")
+    @Html.TextBoxFor(model => model.Hafta, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Hafta)
+    
+    
+    <br />
+    <button class="alert-danger" style="width:100px;height:30px">Save</button>
+
+</div>
+}
